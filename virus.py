@@ -43,6 +43,13 @@ class Virus:
         """
         return self.time_step
 
+    def increment_time_step(self):
+        """
+        Increments the current time step
+        :return: None, increments the current time step of the virus
+        """
+        self.time_step += 1
+
     def set_next_contaminated(self, next_contaminated):
         """
         Setter of the next cubes to contaminate
@@ -69,11 +76,13 @@ class Virus:
     def infect(self):
         """
         Function which infects the cubes to contaminate.
-        :return: None, sets the cubes of coordinates 'next_contaminated' to 1 to indicate contamination
+        :return: None, sets the cubes of coordinates 'next_contaminated' to 1 to indicate contamination.
+        Also increments the time step of the virus
         """
         next_contaminated = self.get_next_contaminated()
         for x, y, z in next_contaminated:
             self.cube[x, y, z] = 1
+        self.increment_time_step()
 
 
 
