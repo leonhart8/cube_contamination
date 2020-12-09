@@ -32,6 +32,13 @@ class Cube:
         """
         return self.size
 
+    def get_cubes(self):
+        """
+        Getter for the cube's grid of cubes
+        :return: a numpy array, this cube's cubes'
+        """
+        return self.cubes
+
     def get_neighbors(self, coord_x, coord_y, coord_z):
         """
         Gets the set of neighbors of a given elementary cube in the grid
@@ -55,3 +62,10 @@ class Cube:
         if coord_z + 1 < size:
             neighbors.add((coord_x, coord_y, coord_z + 1))
         return neighbors
+
+    def infection_rate(self):
+        """
+        Gives the cube's current infection rate
+        :return: float, the cube's current infection rate
+        """
+        return np.sum(self.get_cubes()) / (self.get_size() ** 3)
