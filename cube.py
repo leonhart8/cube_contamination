@@ -24,13 +24,35 @@ class Cube:
                 for z in range(size):
                     cubes.append(ec.ElementaryCube())
         self.cubes = cubes
+        self.size = size
 
-    def get_neighbors_for_cube(self, coord_x, coord_y, coord_z):
+    def get_size(self):
+        """
+        Getter for the cube's size
+        :return: int, size of the cube
+        """
+        return self.size
+
+    def get_neighbors(self, coord_x, coord_y, coord_z):
         """
         Gets the set of neighbors of a given elementary cube in the grid
         :param coord_x: int, the coordinate on the x axis of a given cube
         :param coord_y: int, the coordinate on the y axis of a given cube
         :param coord_z: int, the coordinate on the z axis of a given cube
-        :return:
+        :return: set of tuples coordinates of the selected cube's neighbors
         """
-        pass
+        neighbors = set()
+        size = self.get_size()
+        if coord_x - 1 >= 0:
+            neighbors.add((coord_x - 1, coord_y, coord_z))
+        if coord_x + 1 < size:
+            neighbors.add((coord_x + 1, coord_y, coord_z))
+        if coord_y - 1 >= 0:
+            neighbors.add((coord_x, coord_y - 1, coord_z))
+        if coord_y + 1 < size:
+            neighbors.add((coord_x, coord_y + 1, coord_z))
+        if coord_z - 1 > 0:
+            neighbors.add((coord_x, coord_y, coord_z - 1))
+        if coord_z + 1 < size:
+            neighbors.add((coord_x, coord_y, coord_z + 1))
+        return neighbors
