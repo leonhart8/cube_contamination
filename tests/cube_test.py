@@ -13,6 +13,230 @@ class MyTestCase(unittest.TestCase):
         """
         self.cube = cube.Cube(5)
 
+    # Start by testing neighbors for elementary cubes in contact with 0 sides of the bigger cube
+
+    def test_get_neighbors_for_middle_cube(self):
+        """
+        Checks if the neighbors of a "middle" cube with four neighbors are the correct ones
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        s = {(2, 2, 1), (2, 2, 3), (2, 1, 2), (2, 3, 2), (1, 2, 2), (3, 2, 2)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 2, 2))
+
+    # Testing neighbors for elementary cubes in contact with 1 side of the bigger cube
+
+    def test_get_neighbors_for_left_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the left side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_right_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_bottom_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the bottom side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_top_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    # Testing neighbors for elementary cubes in contact with 2 sides of the bigger cube
+
+    def test_get_neighbors_for_left_front_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the left and front side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_left_back_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the left and back side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_left_top_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the left and top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_left_bottom_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the left and bottom side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_right_front_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right and front side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_right_back_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right and back side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_right_top_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right and top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_right_bottom_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the right and top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_top_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back and top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_bottom_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back and bottom side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_top_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front and top side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_bottom_side(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front and bottom side of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    # Testing for elementary cubes in contact with 3 other sides
+
+    def test_get_neighbors_for_front_top_left_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front, top left corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_top_right_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front, top right corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_bottom_left_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front, bottom left corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_front_bottom_right_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the front, bottom right corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_top_left_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back, top left corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_top_right_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back, top right corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_bottom_left_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back, bottom left corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
+    def test_get_neighbors_for_back_bottom_right_corner(self):
+        """
+        Checks for the right neighbors for an elementary cube in contact
+        with the back, bottom right corner of the cube
+        :return: AssertionError if the setup fails, Nothing otherwise
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
