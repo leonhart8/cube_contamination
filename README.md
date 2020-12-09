@@ -9,34 +9,34 @@ Let us illustrate the process in 2D, with 0 representing an uninfected tile and 
 
 At the start no tile is infected :
 
-+--------+
-|0 |0 |0 |
-+--------+
-|0 |0 |0 |
-+--------+
-|0 |0 |0 |
-+--------+
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
 
 The virus then randomly chooses a tile to infect :
 
-+--------+
-|1 |0 |0 |
-+--------+
-|0 |0 |0 |
-+--------+
-|0 |0 |0 |
-+--------+
++--------+<br/>
+|1 |0 |0 |<br/>
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
 
 
 The infection spreads to neighboring tiles until complete infection !
 
-+--------+
-|1 |1 |0 |
-+--------+
-|1 |0 |0 |
-+--------+
-|0 |0 |0 |
-+--------+
++--------+<br/>
+|1 |1 |0 |<br/>
++--------+<br/>
+|1 |0 |0 |<br/>
++--------+<br/>
+|0 |0 |0 |<br/>
++--------+<br/>
 
 # Required libraries
 
@@ -54,7 +54,7 @@ No other install is required.
 
 In order to run tests in command line, place yourself at the root of the project and run
 
-<code>user$ python3 -m tests.{test_module_name} numpy</code>
+<code>user$ python3 -m tests.{test_module_name} </code>
 
 ## Running the infection
 
