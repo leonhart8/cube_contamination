@@ -65,5 +65,15 @@ class Virus:
                 next_to_contaminate.union(self.cube.get_neighbors(x, y, z))
         self.set_next_contaminated(next_to_contaminate)
 
+    def infect(self):
+        """
+        Function which infects the cubes to contaminate.
+        :return: None, sets the cubes of coordinates 'next_contaminated' to 1 to indicate contamination
+        """
+        next_contaminated = self.get_next_contaminated()
+        for x, y, z in self.get_next_contaminated():
+            self.cube[x, y, z] = 1
+
+
 
 
