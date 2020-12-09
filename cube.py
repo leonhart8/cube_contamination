@@ -1,6 +1,7 @@
 """
 Module containing the cube class
 """
+import elementary_cube as ec
 
 
 class Cube:
@@ -17,7 +18,12 @@ class Cube:
         :param size: int, the dimension of the grid in height, width and length
         :return: None, constructor
         """
-        pass
+        cubes = []
+        for x in range(size):
+            for y in range(size):
+                for z in range(size):
+                    cubes.append(ec.ElementaryCube())
+        self.cubes = cubes
 
     def get_neighbors_for_cube(self, coord_x, coord_y, coord_z):
         """
