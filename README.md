@@ -75,3 +75,7 @@ In order to get more info on the usage of the script run
 Find a way to harness vectorization to compute the infection even faster
 
 Implement a GUI which displays the infection
+
+# TO DO
+
+Write tests for the Virus class
