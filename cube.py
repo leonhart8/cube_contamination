@@ -2,14 +2,18 @@
 Module containing the cube class
 """
 import elementary_cube as ec
+import numpy as np
 
 
 class Cube:
     """
     A cube is a 3D grid of elementary cubes. That is to say a cube of size n contains n^3
     elementary cubes.
+
     A cube can be seen as having an x-axis, a y-axis and a z-axis with a set of coordinates
-    with respect to these axes in order to position elementary cubes
+    with respect to these axes in order to position elementary cubes.
+
+    An elementary cube is contaminated if its value is one, zero otherwise
     """
 
     def __init__(self, size):
@@ -18,12 +22,7 @@ class Cube:
         :param size: int, the dimension of the grid in height, width and length
         :return: None, constructor
         """
-        cubes = []
-        for x in range(size):
-            for y in range(size):
-                for z in range(size):
-                    cubes.append(ec.ElementaryCube())
-        self.cubes = cubes
+        self.cubes = np.zeros(size*size*size).reshape((size, size, size))
         self.size = size
 
     def get_size(self):
