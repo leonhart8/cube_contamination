@@ -41,6 +41,7 @@ class Virus:
         Getter of the current time step of the infection
         :return: get the current time step of the infection
         """
+        return self.time_step
 
     def set_next_contaminated(self, next_contaminated):
         """
