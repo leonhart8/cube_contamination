@@ -21,7 +21,7 @@ class ElementaryCube:
         Gets this elementary cube's contamination state
         :return: Bool, get the current contamination state
         """
-        pass
+        return self.contamination_state
 
     def contaminate(self):
         """
