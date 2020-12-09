@@ -1,6 +1,7 @@
 import unittest
 import cube
 
+
 class MyTestCase(unittest.TestCase):
     """
     Test class for the cube class
@@ -96,7 +97,7 @@ class MyTestCase(unittest.TestCase):
         with the left and back side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        s = {(1, 2, 4), (0, 1, 4), (0, 2, 4), (0, 2, 3)}
+        s = {(1, 2, 4), (0, 1, 4), (0, 3, 4), (0, 2, 3)}
         self.assertEqual(s, self.cube.get_neighbors(0, 2, 4))
 
     def test_get_neighbors_for_left_top_side(self):
