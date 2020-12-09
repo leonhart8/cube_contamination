@@ -68,4 +68,4 @@ class Cube:
         Gives the cube's current infection rate
         :return: float, the cube's current infection rate
         """
-        return np.sum(self.get_cubes()) / (self.get_size() ** 3)
+        return np.sum(self.get_cubes()) / self.get_cubes().size
