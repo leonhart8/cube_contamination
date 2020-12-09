@@ -31,7 +31,8 @@ class MyTestCase(unittest.TestCase):
         with the left side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 2, 2), (0, 1, 2), (0, 3, 2), (0, 2, 1), (0, 2, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 2, 2))
 
     def test_get_neighbors_for_right_side(self):
         """
@@ -39,7 +40,8 @@ class MyTestCase(unittest.TestCase):
         with the right side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 2, 2), (4, 1, 2), (4, 3, 2), (4, 2, 1), (4, 2, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 2, 2))
 
     def test_get_neighbors_for_back_side(self):
         """
@@ -47,7 +49,8 @@ class MyTestCase(unittest.TestCase):
         with the right side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 2, 4), (3, 2, 4), (2, 1, 4), (2, 3, 4), (2, 2, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 2, 4))
 
     def test_get_neighbors_for_front_side(self):
         """
@@ -55,7 +58,8 @@ class MyTestCase(unittest.TestCase):
         with the front side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 2, 0), (3, 2, 0), (2, 1, 0), (2, 3, 0), (2, 2, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 2, 0))
 
     def test_get_neighbors_for_bottom_side(self):
         """
@@ -63,7 +67,8 @@ class MyTestCase(unittest.TestCase):
         with the bottom side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 2), (3, 0, 2), (2, 1, 2), (2, 0, 1), (2, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 0, 2))
 
     def test_get_neighbors_for_top_side(self):
         """
@@ -71,7 +76,8 @@ class MyTestCase(unittest.TestCase):
         with the top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 4, 2), (3, 4, 2), (2, 3, 2), (2, 4, 1), (2, 4, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 4, 2))
 
     # Testing neighbors for elementary cubes in contact with 2 sides of the bigger cube
 
@@ -81,7 +87,8 @@ class MyTestCase(unittest.TestCase):
         with the left and front side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 2, 0), (0, 1, 0), (0, 3, 0), (0, 2, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 2, 0))
 
     def test_get_neighbors_for_left_back_side(self):
         """
@@ -89,7 +96,8 @@ class MyTestCase(unittest.TestCase):
         with the left and back side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 2, 4), (0, 1, 4), (0, 2, 4), (0, 2, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 2, 4))
 
     def test_get_neighbors_for_left_top_side(self):
         """
@@ -97,7 +105,8 @@ class MyTestCase(unittest.TestCase):
         with the left and top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 4, 2), (0, 3, 2), (0, 4, 1), (0, 4, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 4, 2))
 
     def test_get_neighbors_for_left_bottom_side(self):
         """
@@ -105,7 +114,8 @@ class MyTestCase(unittest.TestCase):
         with the left and bottom side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 2), (0, 1, 2), (0, 0, 1), (0, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 0, 2))
 
     def test_get_neighbors_for_right_front_side(self):
         """
@@ -113,7 +123,8 @@ class MyTestCase(unittest.TestCase):
         with the right and front side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 2, 0), (4, 1, 0), (4, 3, 0), (4, 2, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 2, 0))
 
     def test_get_neighbors_for_right_back_side(self):
         """
@@ -121,7 +132,8 @@ class MyTestCase(unittest.TestCase):
         with the right and back side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 2, 4), (4, 1, 4), (4, 3, 4), (4, 2, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 2, 4))
 
     def test_get_neighbors_for_right_top_side(self):
         """
@@ -129,7 +141,8 @@ class MyTestCase(unittest.TestCase):
         with the right and top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 4, 2), (4, 3, 2), (4, 4, 1), (4, 4, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 4, 2))
 
     def test_get_neighbors_for_right_bottom_side(self):
         """
@@ -137,7 +150,8 @@ class MyTestCase(unittest.TestCase):
         with the right and top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 0, 2), (4, 1, 2), (4, 0, 1), (4, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 0, 2))
 
     def test_get_neighbors_for_back_top_side(self):
         """
@@ -145,7 +159,8 @@ class MyTestCase(unittest.TestCase):
         with the back and top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 4, 4), (3, 4, 4), (2, 3, 4), (2, 4, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 4, 4))
 
     def test_get_neighbors_for_back_bottom_side(self):
         """
@@ -153,7 +168,8 @@ class MyTestCase(unittest.TestCase):
         with the back and bottom side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 4), (3, 0, 4), (2, 1, 4), (2, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 0, 4))
 
     def test_get_neighbors_for_front_top_side(self):
         """
@@ -161,7 +177,8 @@ class MyTestCase(unittest.TestCase):
         with the front and top side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 4, 0), (3, 4, 0), (2, 3, 0), (2, 4, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 4, 0))
 
     def test_get_neighbors_for_front_bottom_side(self):
         """
@@ -169,7 +186,8 @@ class MyTestCase(unittest.TestCase):
         with the front and bottom side of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 0), (3, 0, 0), (2, 1, 0), (2, 0, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(2, 0, 0))
 
     # Testing for elementary cubes in contact with 3 other sides
 
@@ -179,7 +197,7 @@ class MyTestCase(unittest.TestCase):
         with the front, top left corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+
 
     def test_get_neighbors_for_front_top_right_corner(self):
         """
@@ -187,7 +205,8 @@ class MyTestCase(unittest.TestCase):
         with the front, top right corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 4, 0), (0, 3, 0), (0, 4, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 4, 0))
 
     def test_get_neighbors_for_front_bottom_left_corner(self):
         """
@@ -195,7 +214,8 @@ class MyTestCase(unittest.TestCase):
         with the front, bottom left corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 0), (0, 1, 0), (0, 0, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 0, 0))
 
     def test_get_neighbors_for_front_bottom_right_corner(self):
         """
@@ -203,7 +223,8 @@ class MyTestCase(unittest.TestCase):
         with the front, bottom right corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 0, 0), (4, 1, 0), (4, 0, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 0, 0))
 
     def test_get_neighbors_for_back_top_left_corner(self):
         """
@@ -211,7 +232,8 @@ class MyTestCase(unittest.TestCase):
         with the back, top left corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 0, 0), (4, 1, 0), (4, 0, 1)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 0, 0))
 
     def test_get_neighbors_for_back_top_right_corner(self):
         """
@@ -219,7 +241,8 @@ class MyTestCase(unittest.TestCase):
         with the back, top right corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 4, 4), (4, 3, 4), (4, 4, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 4, 4))
 
     def test_get_neighbors_for_back_bottom_left_corner(self):
         """
@@ -227,7 +250,8 @@ class MyTestCase(unittest.TestCase):
         with the back, bottom left corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(1, 0, 4), (0, 1, 4), (0, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(0, 0, 4))
 
     def test_get_neighbors_for_back_bottom_right_corner(self):
         """
@@ -235,7 +259,8 @@ class MyTestCase(unittest.TestCase):
         with the back, bottom right corner of the cube
         :return: AssertionError if the setup fails, Nothing otherwise
         """
-        pass
+        s = {(3, 0, 4), (4, 1, 4), (4, 0, 3)}
+        self.assertEqual(s, self.cube.get_neighbors(4, 0, 4))
 
 
 if __name__ == '__main__':
