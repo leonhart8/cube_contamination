@@ -1,7 +1,6 @@
 """
 Module containing the cube class
 """
-import elementary_cube as ec
 import numpy as np
 
 
@@ -57,7 +56,7 @@ class Cube:
             neighbors.add((coord_x, coord_y - 1, coord_z))
         if coord_y + 1 < size:
             neighbors.add((coord_x, coord_y + 1, coord_z))
-        if coord_z - 1 > 0:
+        if coord_z - 1 >= 0:
             neighbors.add((coord_x, coord_y, coord_z - 1))
         if coord_z + 1 < size:
             neighbors.add((coord_x, coord_y, coord_z + 1))
