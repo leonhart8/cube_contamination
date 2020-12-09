@@ -14,7 +14,7 @@ class ElementaryCube:
         Constructor of an elementary cube takes no arguments
         :return: None, sets the contamination state to False
         """
-        pass
+        self.contamination_state = False
 
     def get_contamination_state(self):
         """
