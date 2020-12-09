@@ -65,12 +65,17 @@ class Virus:
         :return: None, sets the set of coordinates of cubes to contaminate in the next_contaminated field
         """
         next_to_contaminate = set()
+        cubes = self.get_cube().get_cubes()
         if self.get_time_step() == 0:
             next_to_contaminate.add(tuple([npr.randint(self.cube.get_size()) for _ in range(3)]))
         else:
             previously_contaminated = self.get_next_contaminated()
             for x, y, z in previously_contaminated:
-                next_to_contaminate.union(self.cube.get_neighbors(x, y, z))
+                neighbors = self.cube.get_neighbors(x, y, z)
+                for neighbor in neighbors:
+                    i, j, k = neighbor
+                    if cubes[i, j, k] == 0:
+                        next_to_contaminate.add(neighbor)
         self.set_next_contaminated(next_to_contaminate)
 
     def infect(self):
@@ -80,8 +85,9 @@ class Virus:
         Also increments the time step of the virus
         """
         next_contaminated = self.get_next_contaminated()
+        grid = self.get_cube().get_cubes()
         for x, y, z in next_contaminated:
-            self.cube[x, y, z] = 1
+            grid[x, y, z] = 1
         self.increment_time_step()
 
 
