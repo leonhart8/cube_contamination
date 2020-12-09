@@ -28,4 +28,4 @@ class ElementaryCube:
         Contaminates this ElementaryCube object
         :return: None, sets the contamination state to True
         """
-        pass
+        self.contamination_state = True
