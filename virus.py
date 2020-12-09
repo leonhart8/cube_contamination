@@ -72,7 +72,7 @@ class Virus:
         :return: None, sets the cubes of coordinates 'next_contaminated' to 1 to indicate contamination
         """
         next_contaminated = self.get_next_contaminated()
-        for x, y, z in self.get_next_contaminated():
+        for x, y, z in next_contaminated:
             self.cube[x, y, z] = 1
 
 
